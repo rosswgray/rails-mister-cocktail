@@ -1,4 +1,10 @@
 // Import your components CSS files here.
+@font-face {
+  font-family: 'Iomanoid';
+  src: url('/assets/fonts/iomanoid.ttf');
+}
+
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "banner";

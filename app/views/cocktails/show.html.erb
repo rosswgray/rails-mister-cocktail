@@ -1,0 +1,20 @@
+<div class="container p-2">
+  
+  <div class="jumbotron mt-5">
+    <h1 class="display-4"><%= @cocktail.name %></h1>
+    <hr class="my-4">
+    <p class="lead">Cocktail Recipe</p>
+    <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.description %> | <%= dose.ingredient.name %></p>
+    <% end  %>
+  </div>
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <div class="">
+      <%= f.input  :description %>
+      <%= f.association :ingredient %>
+    </div>
+      <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+
+</div>
