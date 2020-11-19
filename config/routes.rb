@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  root to: 'cocktails#top'
+
   resources :cocktails do
     collection do
       get :top
     end
 
-    resources :doses, only: [:create]
-    
+    resources :doses, only: [:create] 
   end
 
   resources :ingredients, only: [:index] do
@@ -17,5 +18,4 @@ Rails.application.routes.draw do
   end
 
   resources :doses, only: [:index, :new, :create, :update, :edit, :destroy]
-
 end

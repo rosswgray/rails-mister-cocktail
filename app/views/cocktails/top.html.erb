@@ -10,12 +10,14 @@
   
       <% @top_cocktails.each do |cocktail| %>
         <div class="col mb-4 w-50">
-          <div class="card shadow">
-            <%= image_tag 'sample_cocktail.jpg', class: "card-img-top"  %>
-            <div class="card-body">
-              <h4 class="card-text"><%= cocktail.name %></h4>
+          <%= link_to cocktail_path(cocktail.id), style: "text-decoration: none" do %>
+            <div class="card shadow">
+              <%= image_tag 'sample_martini.jpg', class: "card-img-top"  %>
+              <div class="card-body">
+                <h4 class="card-text"><%= cocktail.name %></h4>
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
       <% end %>
   
