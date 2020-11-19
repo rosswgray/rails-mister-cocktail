@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-dark sticky-top">
+  <%= link_to top_cocktails_path do %>
+    <%= image_tag 'title_logo', style: "max-width: 20rem" %>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav d-inline">
+
+      <%= link_to cocktails_path, class: "nav-link active" do %>
+        All Cocktails <span class="sr-only">(current)</span>
+      <% end %>
+
+      <%= link_to new_cocktail_path, class: "nav-link" do %>
+        Add a cocktail <span class="sr-only"></span>
+      <% end %>
+
+    </div>
+  </div>
+</nav>

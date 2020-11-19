@@ -1,11 +1,18 @@
+<%= render 'partials/navbar' %>
+
 <div class="container p-2">
   
   <div class="jumbotron mt-5">
     <h1 class="display-4"><%= @cocktail.name %></h1>
     <hr class="my-4">
-    <p class="lead">Cocktail Recipe</p>
+    <p class="lead font-weight-bold">Cocktail Recipe</p>
     <% @cocktail.doses.each do |dose| %>
-      <p><%= dose.description %> | <%= dose.ingredient.name %></p>
+      <p>
+        <%= dose.description %> | <%= dose.ingredient.name %>
+        <%= link_to dose, method: :delete, data: { confirm: 'Are your sure?'} do %>
+          <span><i class="far fa-minus-square ml-3"></i></span>
+        <% end %>
+      </p>
     <% end  %>
   </div>
 
@@ -18,3 +25,5 @@
   <% end %>
 
 </div>
+
+<%= render 'partials/footer' %>

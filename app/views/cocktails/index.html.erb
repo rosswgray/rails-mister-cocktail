@@ -1,2 +1,23 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<%= render 'partials/navbar' %>
+
+<div class="container my-3">
+
+  <div class="container py-3" style="max-height: 5rem">
+    <div class="row row-cols-1 row-cols-md-3">
+  
+      <% @cocktails.each do |cocktail| %>
+        <div class="col mb-4 w-50">
+          <%= link_to cocktail_path(cocktail.id), style: "text-decoration: none" do %>
+            <div class="card h-100">
+              <%= image_tag 'sample_martini.jpg', class: "card-img-top"  %>
+              <div class="card-body">
+                <h4 class="card-text"><%= cocktail.name %></h4>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+  
+    </div>
+  </div>
+</div>

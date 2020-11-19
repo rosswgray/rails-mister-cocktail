@@ -1,5 +1,5 @@
 class DosesController < ApplicationController
-  before_action :set_cocktail
+  before_action :set_cocktail, only: [:new, :create, :destroy]
 
   def new
     @dose = Dose.new
@@ -15,6 +15,11 @@ class DosesController < ApplicationController
       puts 'save unsuccessful'
       render :new
     end
+  end
+
+  def destroy
+    @dose.destroy
+    redirect_to cocktail_path(@cocktail)
   end
 
   private

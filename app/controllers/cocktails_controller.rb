@@ -29,7 +29,13 @@ class CocktailsController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    if @cocktail.update(cocktail_params)
+      redirect_to @cocktail, notice: 'Cocktail was successfully updated.'
+    else
+      render :edit
+    end
+  end
 
   private
 

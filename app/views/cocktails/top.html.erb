@@ -11,7 +11,7 @@
       <% @top_cocktails.each do |cocktail| %>
         <div class="col mb-4 w-50">
           <%= link_to cocktail_path(cocktail.id), style: "text-decoration: none" do %>
-            <div class="card shadow">
+            <div class="card">
               <%= image_tag 'sample_martini.jpg', class: "card-img-top"  %>
               <div class="card-body">
                 <h4 class="card-text"><%= cocktail.name %></h4>
@@ -23,8 +23,9 @@
   
     </div>
     <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+    <%= link_to "See all cocktails", cocktails_path, class: "btn btn-primary" %>
   </div>
 
 </div>
 
-
+<%= render 'partials/footer' %>
