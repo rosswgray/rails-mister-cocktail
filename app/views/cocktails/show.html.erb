@@ -22,6 +22,7 @@
     <div class="">
       <%= f.input  :description %>
       <%= f.association :ingredient %>
+      <%= f.input :photo, as: :file %>
     </div>
       <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
