@@ -9,7 +9,7 @@
       <p class="lead font-weight-bold">Cocktail Recipe</p>
       <% @cocktail.doses.each do |dose| %>
         <p>
-          <%= dose.description %> | <%= dose.ingredient.name %> | <%= dose.id %> | <%= dose.cocktail.id %>
+          <%= dose.description %> | <%= dose.ingredient.name %>
           <%= link_to dose, method: :delete, data: { confirm: 'Are your sure?'} do %>
             <span><i class="far fa-minus-square ml-3"></i></span>
           <% end %>
@@ -18,14 +18,16 @@
     </div>
   </div>
 
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <div class="">
-      <%= f.input  :description %>
-      <%= f.association :ingredient %>
-      <%= f.input :photo, as: :file %>
-    </div>
-      <%= f.button :submit, class: "btn btn-primary" %>
-  <% end %>
+  <div class="container w-75">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <div class="">
+        <%= f.input  :description %>
+        <%= f.association :ingredient %>
+        <%#= f.input :photo, as: :file %>
+      </div>
+        <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
 
 </div>
 
