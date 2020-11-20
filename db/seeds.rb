@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 require 'json'
 
@@ -33,7 +26,7 @@ gt.photo.attach(io: gt_photo, filename: 'old.png', content_type: 'image/png')
 
 bel_photo = URI.open('https://res.cloudinary.com/dfwlxwow2/image/upload/v1605849408/david-greenwood-haigh-iAXrwurNea4-unsplash_pzxasn.jpg')
 bel = Cocktail.create!(name: "Bellini")
-bel.photo.attach(io: gt_photo, filename: 'old.png', content_type: 'image/png')
+bel.photo.attach(io: bel_photo, filename: 'old.png', content_type: 'image/png')
 
 ess_photo = URI.open('https://res.cloudinary.com/dfwlxwow2/image/upload/v1605849408/david-greenwood-haigh-iAXrwurNea4-unsplash_pzxasn.jpg')
 ess = Cocktail.create!(name: "Esspresso Martini")
