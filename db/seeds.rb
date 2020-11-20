@@ -16,7 +16,7 @@ martini_photo = URI.open('https://res.cloudinary.com/dfwlxwow2/image/upload/v160
 martini = Cocktail.create!(name: "Classic Martini")
 martini.photo.attach(io: martini_photo, filename: 'martini.png', content_type: 'image/png')
 
-old_photo = URI.open('https://res.cloudinary.com/dfwlxwow2/image/upload/v1605849409/bon-vivant-FcS257Cw9es-unsplash_ykwq1l.jpg')
+old_photo = URI.open('https://res.cloudinary.com/dfwlxwow2/image/upload/v1605860584/sean-bernstein-VLc3BggMacw-unsplash_vmkvqa.jpg')
 old = Cocktail.create!(name: "Old Fashioned")
 old.photo.attach(io: old_photo, filename: 'old.png', content_type: 'image/png')
 
@@ -24,7 +24,7 @@ gt_photo = URI.open('https://res.cloudinary.com/dfwlxwow2/image/upload/v16058494
 gt = Cocktail.create!(name: "Gin & Tonic")
 gt.photo.attach(io: gt_photo, filename: 'old.png', content_type: 'image/png')
 
-bel_photo = URI.open('https://res.cloudinary.com/dfwlxwow2/image/upload/v1605849408/david-greenwood-haigh-iAXrwurNea4-unsplash_pzxasn.jpg')
+bel_photo = URI.open('https://res.cloudinary.com/dfwlxwow2/image/upload/v1605849408/daniel-horvath-joaNTMyVSTc-unsplash_wcisg3.jpg')
 bel = Cocktail.create!(name: "Bellini")
 bel.photo.attach(io: bel_photo, filename: 'old.png', content_type: 'image/png')
 
