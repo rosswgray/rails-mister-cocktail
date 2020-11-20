@@ -13,7 +13,7 @@
               <% if cocktail.photo.attached? %>
                 <%= cl_image_tag cocktail.photo.key, class: "card-img-top" %>
               <% else %>
-                <%= image_tag 'sample_martini.jpg', class: "card-img-top"  %>
+                <%= image_tag 'sample_martini.jpg', class: "card-img-top" %>
               <% end %>
 
               <div class="card-body">
